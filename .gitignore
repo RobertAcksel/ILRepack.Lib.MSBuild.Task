@@ -211,3 +211,4 @@ GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
 /ILRepack.Lib.MSBuild.Task/ILRepack.Lib.MSBuild.Task.snk
+ILRepack.Lib.MSBuild.Task/tasks/
