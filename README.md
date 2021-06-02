@@ -288,12 +288,29 @@ If you are using default targets file then you may notice that it clears Output 
             Additional debug information during merge that will be outputted to LogFile.
         </td>
     </tr>
+    <tr>
+        <td>
+            NoRepackRes
+        </td>
+        <td>
+            Does not add the embedded resource 'ILRepack.List' with all merged assembly names.
+        </td>
+    </tr>
 	<tr>
         <td>
             Wildcards
         </td>
         <td>
             Allows (and resolves) file wildcards (e.g. `*`.dll) in input assemblies.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            RepackDropAttribute
+        </td>
+        <td>
+            Name of an attribute (optional). Members in input assemblies marked with this attribute
+            will be dropped during merging.
         </td>
     </tr>
 </table>

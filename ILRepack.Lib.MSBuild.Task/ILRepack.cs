@@ -223,10 +223,20 @@ namespace ILRepack.Lib.MSBuild.Task
         public virtual bool Verbose { get; set; }
 
         /// <summary>
+        /// Does not add the embedded resource 'ILRepack.List' with all merged assembly names.
+        /// </summary>
+        public virtual bool NoRepackRes { get; set; }
+
+        /// <summary>
         /// Allows (and resolves) file wildcards (e.g. `*`.dll) in input assemblies.
         /// </summary>
         public virtual bool Wildcards { get; set; }
 
+        /// <summary>
+        /// Name of an attribute. Members in InputAssemblies marked with this attribute will be
+        /// dropped during merging.
+        /// </summary>
+        public string RepackDropAttribute { get; set; }
         #endregion
 
         #region Public methods
@@ -243,6 +253,7 @@ namespace ILRepack.Lib.MSBuild.Task
                 KeyContainer = _keyContainer,
                 LogFile = _logFile,
                 LogVerbose = Verbose,
+                NoRepackRes = NoRepackRes,
                 UnionMerge = Union,
                 DebugInfo = DebugInfo,
                 CopyAttributes = CopyAttributes,
@@ -260,7 +271,8 @@ namespace ILRepack.Lib.MSBuild.Task
                 Parallel = Parallel,
                 PauseBeforeExit = PauseBeforeExit,
                 OutputFile = _outputFile,
-                AllowWildCards = Wildcards
+                AllowWildCards = Wildcards,
+                RepackDropAttribute = RepackDropAttribute
             };
 
             repackOptions.AllowedDuplicateNameSpaces.AddRange(ParseDuplicateNamespacesOption(AllowedDuplicateNamespaces));

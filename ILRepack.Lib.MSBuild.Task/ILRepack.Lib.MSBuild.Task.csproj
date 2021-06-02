@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <Version>2.0.18.1</Version>
+    <Version>2.0.18.3</Version>
     <OutputType>Library</OutputType>
     <ProjectGuid>{DB0F6F84-0028-4A9E-9EF6-60309AB51BAC}</ProjectGuid>
     <AppDesignerFolder>Properties</AppDesignerFolder>
